@@ -94,7 +94,7 @@ function addEight(){
 }
 document.getElementById("nine").addEventListener("click", addNine)
 function addNine(){
-    if(firstNum.includes("+")){
+    if(firstNum.includes("+") || firstNum.includes("-")){
         secondNum += 9
         results.innerText = firstNum + secondNum
         return secondNum
@@ -109,6 +109,13 @@ function add(){
     firstNum = firstNum + "+" 
     return firstNum
 } 
+document.getElementById("minus").addEventListener("click", minus)
+function minus(){
+    results.innerText = firstNum
+    firstNum = firstNum + "-" 
+    return firstNum
+} 
+
 
 document.getElementById("equals").addEventListener("click", getAnswer)
 function getAnswer(){
@@ -116,10 +123,20 @@ function getAnswer(){
         if(firstNum.charAt(i) === "+"){
             firstNum = firstNum.replace("+", "")
             result = Number(firstNum) + Number(secondNum)
+            firstNum = result.toString()
+            secondNum = ""
             results.innerText = result
+            
         }
-        else if(firstNum.charAt(i) === "+"){
-            return
+        else if(firstNum.charAt(i) === "-"){
+            firstNum = firstNum.replace("-", "")
+            result = Number(firstNum) - Number(secondNum)
+            firstNum = result.toString()
+            secondNum = ""
+            results.innerText = result
+            
+            
+            
         }
 
     }
