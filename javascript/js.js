@@ -20,7 +20,7 @@ function addOne(){
 }
 document.getElementById("two").addEventListener("click", addTwo)
 function addTwo(){
-    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")|| firstNum.includes("/")){
         secondNum += 2
         results.innerText = firstNum + secondNum
         return secondNum
@@ -31,7 +31,7 @@ function addTwo(){
 }
 document.getElementById("three").addEventListener("click", addThree)
 function addThree(){
-    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")|| firstNum.includes("/")){
         secondNum += 3
         results.innerText = firstNum + secondNum
         return secondNum
@@ -42,7 +42,7 @@ function addThree(){
 }
 document.getElementById("four").addEventListener("click", addFour)
 function addFour(){
-    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")|| firstNum.includes("/")){
         secondNum += 4
         results.innerText = firstNum + secondNum
         return secondNum
@@ -53,7 +53,7 @@ function addFour(){
 }
 document.getElementById("five").addEventListener("click", addFive)
 function addFive(){
-    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")|| firstNum.includes("/")){
         secondNum += 5
         results.innerText = firstNum + secondNum
         return secondNum
@@ -64,7 +64,7 @@ function addFive(){
 }
 document.getElementById("six").addEventListener("click", addSix)
 function addSix(){
-    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")|| firstNum.includes("/")){
         secondNum += 6
         results.innerText = firstNum + secondNum
         return secondNum
@@ -75,7 +75,7 @@ function addSix(){
 }
 document.getElementById("seven").addEventListener("click", addSeven)
 function addSeven(){
-    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")|| firstNum.includes("/")){
         secondNum += 7
         results.innerText = firstNum + secondNum
         return secondNum
@@ -86,7 +86,7 @@ function addSeven(){
 }
 document.getElementById("eight").addEventListener("click", addEight)
 function addEight(){
-    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")|| firstNum.includes("/")){
         secondNum += 8
         results.innerText = firstNum + secondNum
         return secondNum
@@ -97,7 +97,7 @@ function addEight(){
 }
 document.getElementById("nine").addEventListener("click", addNine)
 function addNine(){
-    if(firstNum.includes("+") || firstNum.includes("-")|| firstNum.includes("*")){
+    if(firstNum.includes("+") || firstNum.includes("-")|| firstNum.includes("*")|| firstNum.includes("/")){
         secondNum += 9
         results.innerText = firstNum + secondNum
         return secondNum
@@ -131,7 +131,10 @@ function multiply(){
 }
 document.getElementById("divide").addEventListener("click", divide)
 function divide(){
-    alert("WHATS UP")
+    results.innerText = firstNum
+    firstNum = firstNum + "/" 
+    
+    return firstNum
 }
 
 // Operation Section End
@@ -168,6 +171,16 @@ function getAnswer(){
             
         }
 
+        else if(firstNum.charAt(i) === "/"){
+            firstNum = firstNum.replace("/", "")
+            result = Number(firstNum) / Number(secondNum)
+            firstNum = result.toString()
+            secondNum = ""
+            results.innerText = result
+            
+            
+            
+        }
     }
 }
 
