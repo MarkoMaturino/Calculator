@@ -129,6 +129,10 @@ function multiply(){
     return firstNum
 
 }
+document.getElementById("divide").addEventListener("click", divide)
+function divide(){
+    alert("WHATS UP")
+}
 
 // Operation Section End
 
