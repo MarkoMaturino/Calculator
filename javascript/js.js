@@ -1,9 +1,12 @@
+// Global Variables Start
 const results = document.getElementById("Results")
 let firstNum = ""
 let secondNum = ""
 let result = ""
 
+// Global Variables End
 
+// Numbers Section Start
 document.getElementById("one").addEventListener("click", addOne)
 function addOne(){
     if(firstNum.includes("+")|| firstNum.includes("-")){
@@ -17,7 +20,7 @@ function addOne(){
 }
 document.getElementById("two").addEventListener("click", addTwo)
 function addTwo(){
-    if(firstNum.includes("+")|| firstNum.includes("-")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
         secondNum += 2
         results.innerText = firstNum + secondNum
         return secondNum
@@ -28,7 +31,7 @@ function addTwo(){
 }
 document.getElementById("three").addEventListener("click", addThree)
 function addThree(){
-    if(firstNum.includes("+")|| firstNum.includes("-")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
         secondNum += 3
         results.innerText = firstNum + secondNum
         return secondNum
@@ -39,7 +42,7 @@ function addThree(){
 }
 document.getElementById("four").addEventListener("click", addFour)
 function addFour(){
-    if(firstNum.includes("+")|| firstNum.includes("-")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
         secondNum += 4
         results.innerText = firstNum + secondNum
         return secondNum
@@ -50,7 +53,7 @@ function addFour(){
 }
 document.getElementById("five").addEventListener("click", addFive)
 function addFive(){
-    if(firstNum.includes("+")|| firstNum.includes("-")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
         secondNum += 5
         results.innerText = firstNum + secondNum
         return secondNum
@@ -61,7 +64,7 @@ function addFive(){
 }
 document.getElementById("six").addEventListener("click", addSix)
 function addSix(){
-    if(firstNum.includes("+")|| firstNum.includes("-")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
         secondNum += 6
         results.innerText = firstNum + secondNum
         return secondNum
@@ -72,7 +75,7 @@ function addSix(){
 }
 document.getElementById("seven").addEventListener("click", addSeven)
 function addSeven(){
-    if(firstNum.includes("+")|| firstNum.includes("-")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
         secondNum += 7
         results.innerText = firstNum + secondNum
         return secondNum
@@ -83,7 +86,7 @@ function addSeven(){
 }
 document.getElementById("eight").addEventListener("click", addEight)
 function addEight(){
-    if(firstNum.includes("+")|| firstNum.includes("-")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")){
         secondNum += 8
         results.innerText = firstNum + secondNum
         return secondNum
@@ -94,7 +97,7 @@ function addEight(){
 }
 document.getElementById("nine").addEventListener("click", addNine)
 function addNine(){
-    if(firstNum.includes("+") || firstNum.includes("-")){
+    if(firstNum.includes("+") || firstNum.includes("-")|| firstNum.includes("*")){
         secondNum += 9
         results.innerText = firstNum + secondNum
         return secondNum
@@ -103,6 +106,9 @@ function addNine(){
     results.innerText = firstNum 
     return firstNum}
 }
+// Number Section End
+
+// Operataion Section Start
 document.getElementById("add").addEventListener("click", add)
 function add(){
     results.innerText = firstNum
@@ -114,8 +120,17 @@ function minus(){
     results.innerText = firstNum
     firstNum = firstNum + "-" 
     return firstNum
-} 
+}
+document.getElementById("multiply").addEventListener("click", multiply)
+function multiply(){
+    results.innerText = firstNum
+    firstNum = firstNum + "*" 
+    
+    return firstNum
 
+}
+
+// Operation Section End
 
 document.getElementById("equals").addEventListener("click", getAnswer)
 function getAnswer(){
@@ -131,6 +146,16 @@ function getAnswer(){
         else if(firstNum.charAt(i) === "-"){
             firstNum = firstNum.replace("-", "")
             result = Number(firstNum) - Number(secondNum)
+            firstNum = result.toString()
+            secondNum = ""
+            results.innerText = result
+            
+            
+            
+        }
+        else if(firstNum.charAt(i) === "*"){
+            firstNum = firstNum.replace("*", "")
+            result = Number(firstNum) * Number(secondNum)
             firstNum = result.toString()
             secondNum = ""
             results.innerText = result
