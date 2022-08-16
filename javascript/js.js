@@ -9,11 +9,19 @@ let result = ""
 // Numbers Section Start
 document.getElementById("zero").addEventListener("click", addZero)
 function addZero(){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("*")|| firstNum.includes("/")){
+        secondNum += 0
+        results.innerText = firstNum + secondNum
+        return secondNum
+    }
+    else{firstNum += 0
+    results.innerText = firstNum 
+    return firstNum}
     
 }
 document.getElementById("one").addEventListener("click", addOne)
 function addOne(){
-    if(firstNum.includes("+")|| firstNum.includes("-")){
+    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("/")){
         secondNum += 1
         results.innerText = firstNum + secondNum
         return secondNum
