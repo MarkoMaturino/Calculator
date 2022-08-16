@@ -7,6 +7,10 @@ let result = ""
 // Global Variables End
 
 // Numbers Section Start
+document.getElementById("zero").addEventListener("click", addZero)
+function addZero(){
+    
+}
 document.getElementById("one").addEventListener("click", addOne)
 function addOne(){
     if(firstNum.includes("+")|| firstNum.includes("-")){
