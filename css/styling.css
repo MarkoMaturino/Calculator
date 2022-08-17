@@ -13,10 +13,16 @@ button{
 #First-Row{
     display: flex;
     align-items: flex-start;
+    margin-bottom: 2%;
 }
 #Clear{
     flex: 1 0 auto;
+    background-color: #90C8AC;
 }
 #Delete{
     flex: 1 0 auto;
+    background-color: #D35D6E;
+}
+#Results{
+    max-width: 100% ;
 }
