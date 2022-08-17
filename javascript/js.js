@@ -89,7 +89,7 @@ function clear(){
     firstNum = ""
     secondNum = ""
     result = ""
-    results.innerText = result
+    results.innerText = "000000"
 }
 
 // Operation Section End
