@@ -1,0 +1,22 @@
+
+.Calculator{
+    border:5px solid black;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+button{
+    height: 40px;
+    width: 40px;
+    
+}
+#First-Row{
+    display: flex;
+    align-items: flex-start;
+}
+#Clear{
+    flex: 1 0 auto;
+}
+#Delete{
+    flex: 1 0 auto;
+}
