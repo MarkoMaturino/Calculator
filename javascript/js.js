@@ -84,6 +84,13 @@ document.getElementById("divide").addEventListener("click", divide)
 function divide(){
     return conCatNumbers("/")
 }
+document.getElementById("Clear").addEventListener("click", clear)
+function clear(){
+    firstNum = ""
+    secondNum = ""
+    result = ""
+    results.innerText = result
+}
 
 // Operation Section End
 
