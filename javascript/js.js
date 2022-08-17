@@ -93,7 +93,13 @@ function clear(){
 }
 document.getElementById("Delete").addEventListener("click", del)
 function del(){
-    if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("/") || firstNum.includes("*")){
+    
+    if((secondNum === "")&&(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("/") || firstNum.includes("*"))){
+        firstNum = firstNum.substring(0, firstNum.length -1)
+        results.innerText = firstNum
+        return firstNum    
+    }
+    else if(firstNum.includes("+")|| firstNum.includes("-")|| firstNum.includes("/") || firstNum.includes("*")){
         secondNum = secondNum.substring(0, secondNum.length -1)
         results.innerText = firstNum + secondNum
         return secondNum
