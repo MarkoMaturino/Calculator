@@ -1,4 +1,4 @@
-// Global Variables Start
+// Global Variables & Functions Start
 const results = document.getElementById("Results")
 let firstNum = ""
 let secondNum = ""
@@ -20,7 +20,7 @@ function conCatNumbers(x){
     return firstNum
 
 }
-// Global Variables End
+// Global Variables & Functions End
 
 // Numbers Section Start
 document.getElementById("zero").addEventListener("click", addZero)
@@ -73,24 +73,16 @@ function add(){
 } 
 document.getElementById("minus").addEventListener("click", minus)
 function minus(){
-    results.innerText = firstNum
-    firstNum = firstNum + "-" 
-    return firstNum
+    return conCatNumbers("-")
 }
 document.getElementById("multiply").addEventListener("click", multiply)
 function multiply(){
-    results.innerText = firstNum
-    firstNum = firstNum + "*" 
-    
-    return firstNum
+    return conCatNumbers("*")
 
 }
 document.getElementById("divide").addEventListener("click", divide)
 function divide(){
-    results.innerText = firstNum
-    firstNum = firstNum + "/" 
-    
-    return firstNum
+    return conCatNumbers("/")
 }
 
 // Operation Section End
