@@ -135,7 +135,7 @@ function getAnswer(){
             
         }
         else if(firstNum.charAt(i) === "*"){
-            firstNum = firstNum.replace("*", "")
+            firstNum = firstNum.replaceAll("*", "")
             result = Number(firstNum) * Number(secondNum)
             firstNum = result.toString()
             secondNum = ""
@@ -146,11 +146,22 @@ function getAnswer(){
         }
 
         else if(firstNum.charAt(i) === "/"){
-            firstNum = firstNum.replace("/", "")
+            firstNum = firstNum.replaceAll("/", "")
             result = Number(firstNum) / Number(secondNum)
+            if(result != Infinity){
             firstNum = result.toString()
             secondNum = ""
             results.innerText = result
+            }
+            else{
+                let addDivisionToFirstnum = firstNum + "/"
+                firstNum = addDivisionToFirstnum
+                secondNum = ""
+                alert("You can't do that")
+                results.innerText = firstNum + secondNum
+                return firstNum
+            }
+
             
             
             
