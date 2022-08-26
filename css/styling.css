@@ -1,10 +1,9 @@
-*{
 
-}
 body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 html, body{
     height: 100%;   
@@ -38,7 +37,13 @@ button{
     background-color: #D35D6E;
 }
 #Results{
-    max-width: 100% ;
+    border: 6px solid black;
+    width: 22%;    
+    margin: 0;
+    vertical-align: bottom;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 #credit{
     background-color: #e8f1f2;
