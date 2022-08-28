@@ -36,9 +36,9 @@ button{
     flex: 1 0 auto;
     background-color: #D35D6E;
 }
-#Results{
-    border: 6px solid black;
-    width: 22%;    
+#Results{   
+    border: 7px solid black;
+    width: 318px;    
     margin: 0;
     vertical-align: bottom;
     overflow: hidden;
